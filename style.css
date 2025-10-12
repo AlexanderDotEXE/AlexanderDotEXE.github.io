@@ -1,3 +1,18 @@
+body {
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 /* Split the screen in half */
 .split {
   height: 100%;
@@ -6,12 +21,13 @@
   z-index: 1;
   top: 0;
   overflow-x: hidden;
-  padding-top: 20px;
 }
 
 /* Control the left side */
 .left {
   left: 0;
+  height: 100vh;
+  padding: 1% 0;
 }
 
 /* Control the right side */
@@ -20,7 +36,7 @@
 }
 
 .cell {
-    width: 50px;
+    width: 6%;
     height: 100%;
     border: 1px solid #ccc;
     display: inline-block;
@@ -28,7 +44,7 @@
 }
 
 .row {
-    height: 50px;
+    height: 6vh;
     margin: 0;
     padding: 0;
 }
@@ -99,4 +115,43 @@
 
 .context-menu li a {
   cursor: pointer; /* zeigt eine Hand beim Hover */
+}
+
+.context-menu-header {
+  font-weight: bold;
+  text-align: left;
+  background-color: rgb(142, 142, 142) !important;
+  cursor: default; /* verhindert die Hand beim Hover */
+}
+
+@media screen and (max-width: 768px) {
+  .split {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .left, .right {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 0;
+  }
+
+  .cell {
+    width: 27px;
+  }
+
+  .row {
+    height: 27px;
+  }
+
+  .container {
+    height: auto;
+    text-align: center;
+  }
+
+  .right {
+    margin-bottom: 20%;
+  }
 }

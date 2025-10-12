@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
     <title>A* Pathfinding</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-    <div class="split left">
-        <div id="grid"></div>
+
+    <div class="container">
+        <div class="split right">
+            <h1>A* Pathfinding Visualization</h1>
+            <p>Click to set start and end points, and draw obstacles. Press "Start" to see the A* algorithm in action!
+            </p>
+            
+            <button onclick="start()" class="button" id="startBtn">Start</button>
+            <button onclick="reset()" class="button" id="resetBtn">Reset</button>
+            <a>Visualize: </a> <input type="checkbox" id="visualize">
+        </div>
+
+        <div class="split left">
+            <div id="grid"></div>
+        </div>
+
+        <div id="contextMenu" class="context-menu" style="display:none">
+            <ul>
+                <li class="context-menu-header"><a>Context Menu</a></li>
+                <li><a onclick="setStart()">Make Cell Starting Cell</a></li>
+                <li><a onclick="setEnd()">Make Cell Finish Cell</a></li>
+            </ul>
+        </div>
     </div>
 
-    <div class="split right">
-        <h1>A* Pathfinding Visualization</h1>
-        <p>Click to set start and end points, and draw obstacles. Press "Start" to see the A* algorithm in action!</p>
-        <button onclick="start()" id="startBtn">Start</button>
-        <button onclick="reset()" id="resetBtn">Reset</button>
-        <a>Visualize: </a> <input type="checkbox" id="visualize">
-    </div>
-
-    <div id="contextMenu" class="context-menu" style="display:none">
-        <ul>
-            <li><a onclick="setStart()">Make Cell Starting Cell</a></li>
-            <li><a onclick="setEnd()">Make Cell Finish Cell</a></li>
-        </ul>
-    </div>
 
     <script type="module" src="main.js"></script>
 </body>
+
 </html>
