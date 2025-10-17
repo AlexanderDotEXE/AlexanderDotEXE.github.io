@@ -2,6 +2,9 @@
 ## 🎯 Educational Purpose
 
 This project is created for educational purposes only to demonstrate the A* pathfinding algorithm in action. It provides an interactive visualization of how the A* algorithm finds the shortest path between two points while avoiding obstacles.
+## 👀 Preview
+
+![A* Pathfinding Algorithm Preview](preview.png)
 
 ## 🔍 Features
 
